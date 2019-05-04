@@ -61,6 +61,10 @@ namespace IdleRPGRandomnessFinder {
             return line.Contains( "won" );
         }
 
+        private static int getNumberFromLine( string line ) {
+            return int.Parse( Regex.Match( line, "\\d+" ).Value );
+        }
+
         private static Flip createFlipFromLines( Queue<string> lines ) {
             Flip f = new Flip();
 
@@ -100,40 +104,38 @@ namespace IdleRPGRandomnessFinder {
             var lineQueue = new Queue<string>();
             var flipResults = new List<Flip>();
 
+            int flipAmount;
+
 
             for ( int i = 0; i < fileLines.Count; i++ ) {
 
-                // find a user message
-                if ( isUserMessageHeader( fileLines[i] ) ) {
+                // find the result to only get the true amounts
+                if ( isFlipResultMessage( fileLines[i] ) ) {
 
-                    // make sure that message only contains one line, and it's a flip request
-                    if ( isFlipRequestMessage( fileLines[i + 1] ) ) {
+                    // get and store the amount
+                    flipAmount = getNumberFromLine( fileLines[i] );
 
-                        // ensure the user didn't put multiple lines
-                        if ( fileLines[i + 2] == string.Empty ) {
+                    // get the header
+                    if ( isRPGBotMessageHeader( fileLines[i - 1] ) ) {
 
+                        // look for the user message
+                        for ( int j = 0; j < 10; j++ ) {
+                            if( isFlipRequestMessage( fileLines[i - j] ) && getNumberFromLine( fileLines[i - j] ) == flipAmount ) {
 
-                            for ( int j = i; j < Math.Min( i + 5, fileLines.Count ); j++ ) {
+                                for ( int k = 0; k < 5; k++ ) {
+                                    if ( isUserMessageHeader( fileLines[i - j - k] ) ) {
 
-                                // look ahead for the idlebot header and flip response
-                                // we can possibly get a flip response or a cooldown message.  maybe an error message or blank too
-                                if ( isRPGBotMessageHeader( fileLines[j] ) ) {
+                                        // user header
+                                        lineQueue.Enqueue( fileLines[i - j - k] );
 
-                                    if ( isFlipResultMessage( fileLines[j + 1] ) ) {
+                                        // user request
+                                        lineQueue.Enqueue( fileLines[i - j] );
 
-                                        // i-1 = user/timestamp
+                                        // bot header
+                                        lineQueue.Enqueue( fileLines[i - 1] );
+
+                                        // bot response
                                         lineQueue.Enqueue( fileLines[i] );
-                                        // i   = flip request
-                                        lineQueue.Enqueue( fileLines[i + 1] );
-                                        // j   = rpgbot response
-                                        lineQueue.Enqueue( fileLines[j] );
-                                        // j+1 = flip response
-                                        lineQueue.Enqueue( fileLines[j + 1] );
-
-
-                                        flipResults.Add( createFlipFromLines( lineQueue ) );
-
-                                        lineQueue.Clear();
                                     }
                                 }
                             }
@@ -143,11 +145,23 @@ namespace IdleRPGRandomnessFinder {
             }
 
 
-            foreach( var x in flipResults ) {
+            foreach ( var x in flipResults ) {
 
                 Console.WriteLine( x.ToString() );
             }
 
+            int headsCount = flipResults.Where( x => x.flipRequestIsHeads ).Count();
+            int tailsCount = flipResults.Where( x => !x.flipRequestIsHeads ).Count();
+
+            Console.WriteLine( "Total Heads: " + headsCount.ToString() );
+            Console.WriteLine( "Total Tails: " + tailsCount.ToString() );
+
+            Console.WriteLine( "Total Flips: " + flipResults.Count );
+            Console.WriteLine( "% Heads: " + (float)headsCount / flipResults.Count );
+            Console.WriteLine( "% Tails: " + (float)tailsCount / flipResults.Count );
+
+            // 1975 tails
+            // 1948 heads
             Console.Read();
         }
     }

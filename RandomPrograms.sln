@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdleRPGRandomnessFinder", "IdleRPGRandomnessFinder\IdleRPGRandomnessFinder.csproj", "{29BAD5B5-9546-4969-BBCC-27CF05A535FE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiscordEmojiCounter", "DiscordEmojiCounter\DiscordEmojiCounter.csproj", "{6812E5F4-79BB-417A-B7CC-387876CBB17B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SteamFriendsListMapper", "SteamFriendsListMapper\SteamFriendsListMapper.csproj", "{B7486A58-56FC-497F-99C5-C837C862077B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{29BAD5B5-9546-4969-BBCC-27CF05A535FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{29BAD5B5-9546-4969-BBCC-27CF05A535FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{29BAD5B5-9546-4969-BBCC-27CF05A535FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6812E5F4-79BB-417A-B7CC-387876CBB17B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6812E5F4-79BB-417A-B7CC-387876CBB17B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6812E5F4-79BB-417A-B7CC-387876CBB17B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6812E5F4-79BB-417A-B7CC-387876CBB17B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7486A58-56FC-497F-99C5-C837C862077B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7486A58-56FC-497F-99C5-C837C862077B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7486A58-56FC-497F-99C5-C837C862077B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7486A58-56FC-497F-99C5-C837C862077B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
