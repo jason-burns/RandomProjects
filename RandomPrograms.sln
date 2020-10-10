@@ -1,13 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29403.142
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdleRPGRandomnessFinder", "IdleRPGRandomnessFinder\IdleRPGRandomnessFinder.csproj", "{29BAD5B5-9546-4969-BBCC-27CF05A535FE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiscordEmojiCounter", "DiscordEmojiCounter\DiscordEmojiCounter.csproj", "{6812E5F4-79BB-417A-B7CC-387876CBB17B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SteamFriendsListMapper", "SteamFriendsListMapper\SteamFriendsListMapper.csproj", "{B7486A58-56FC-497F-99C5-C837C862077B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FrozenMountainApplication", "FrozenMountainApplication\FrozenMountainApplication.csproj", "{F269D8BC-D4B4-4EF5-8B08-71E250258450}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MassQueryTool", "MassQueryTool\MassQueryTool.csproj", "{B72F155D-E840-4703-A9E9-0AE518C9E00E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,8 +31,19 @@ Global
 		{B7486A58-56FC-497F-99C5-C837C862077B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7486A58-56FC-497F-99C5-C837C862077B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7486A58-56FC-497F-99C5-C837C862077B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F269D8BC-D4B4-4EF5-8B08-71E250258450}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F269D8BC-D4B4-4EF5-8B08-71E250258450}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F269D8BC-D4B4-4EF5-8B08-71E250258450}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F269D8BC-D4B4-4EF5-8B08-71E250258450}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B72F155D-E840-4703-A9E9-0AE518C9E00E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B72F155D-E840-4703-A9E9-0AE518C9E00E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B72F155D-E840-4703-A9E9-0AE518C9E00E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B72F155D-E840-4703-A9E9-0AE518C9E00E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {74B3BAC4-D6E6-4D63-B294-D8FE96D3ED02}
 	EndGlobalSection
 EndGlobal
