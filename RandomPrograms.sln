@@ -13,6 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FrozenMountainApplication",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MassQueryTool", "MassQueryTool\MassQueryTool.csproj", "{B72F155D-E840-4703-A9E9-0AE518C9E00E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Keys", "Keys\Keys.csproj", "{B1007B9E-F955-4662-A8D8-3AB9341BD03E}"
+>>>>>>> Stashed changes
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +42,10 @@ Global
 		{B72F155D-E840-4703-A9E9-0AE518C9E00E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B72F155D-E840-4703-A9E9-0AE518C9E00E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B72F155D-E840-4703-A9E9-0AE518C9E00E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1007B9E-F955-4662-A8D8-3AB9341BD03E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1007B9E-F955-4662-A8D8-3AB9341BD03E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1007B9E-F955-4662-A8D8-3AB9341BD03E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1007B9E-F955-4662-A8D8-3AB9341BD03E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

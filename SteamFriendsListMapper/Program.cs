@@ -22,15 +22,15 @@ namespace SteamFriendsListMapper {
         private static string GetPlayerFriendsQueryExtension2 = "&relationship=friend";
 
         static string GetPlayerSummariesRaw( IEnumerable<string> steamIds ) {
-            return Encoding.UTF8.GetString( client.DownloadData( $"{GetPlayerSummariesQueryBase}{Keys.SteamAPIKey}{GetPlayerSummariesQueryExtension}{string.Join( ",", steamIds )}" ) );
+            return Encoding.UTF8.GetString( client.DownloadData( $"{GetPlayerSummariesQueryBase}{Keys.Keys.SteamAPIKey}{GetPlayerSummariesQueryExtension}{string.Join( ",", steamIds )}" ) );
         }
 
         static string GetPlayerSummaryRaw( string steamId ) {
-            return Encoding.UTF8.GetString( client.DownloadData( $"{GetPlayerSummariesQueryBase}{Keys.SteamAPIKey}{GetPlayerSummariesQueryExtension}{ steamId }" ) );
+            return Encoding.UTF8.GetString( client.DownloadData( $"{GetPlayerSummariesQueryBase}{Keys.Keys.SteamAPIKey}{GetPlayerSummariesQueryExtension}{ steamId }" ) );
         }
 
         static string GetPlayerFriendsRaw( string steamid ) {
-            return Encoding.UTF8.GetString( client.DownloadData( $"{GetPlayerFriendsQueryBase}{Keys.SteamAPIKey}{GetPlayerFriendsQueryExtension}{steamid}{GetPlayerFriendsQueryExtension2}" ) );
+            return Encoding.UTF8.GetString( client.DownloadData( $"{GetPlayerFriendsQueryBase}{Keys.Keys.SteamAPIKey}{GetPlayerFriendsQueryExtension}{steamid}{GetPlayerFriendsQueryExtension2}" ) );
         }
 
         static PlayerSummaryResponse GetPlayerSummary( string steamId ) {
@@ -53,9 +53,7 @@ namespace SteamFriendsListMapper {
             client = new WebClient();
 
             int levelsDeep = 1;
-            SteamUser rootUser = startFriendsTree( 1, Keys.SelfSteamID64 );
-
-
+            SteamUser rootUser = startFriendsTree( 1, Keys.Keys.SelfSteamID64 );
 
             Console.Read();
         }
