@@ -48,11 +48,21 @@ namespace ElevatorSimulator
         private int capacity;
 
         public int passengers;
-        public bool inUse;
+        public bool isTravelling;
 
-        public bool isOnFloor(int floor)
+        public bool IsOnFloor(int floor)
         {
             return currentFloor == floor;
+        }
+
+        public void TravelToFloor(int floor)
+        {
+            if (IsOnFloor(floor))
+            {
+                return;
+            }
+
+            this.isTravelling = true;
         }
 
 
@@ -118,12 +128,7 @@ namespace ElevatorSimulator
             // leave the elevator at the bottom floor until it is requested
             // queue up the elevator to the middle floor
             // queue up the elevator to the top floor
-
-            // elevators will go 1 floor up if 
-
-            Building smallApartment = new Building(2);
-
-            Building
+            // elevators will go N floors up (probably just 1) if a request is made on the floor above and the elevator has capacity
 
 
             // time of day
