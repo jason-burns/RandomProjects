@@ -13,8 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FrozenMountainApplication",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MassQueryTool", "MassQueryTool\MassQueryTool.csproj", "{B72F155D-E840-4703-A9E9-0AE518C9E00E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Keys", "Keys\Keys.csproj", "{B1007B9E-F955-4662-A8D8-3AB9341BD03E}"
->>>>>>> Stashed changes
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Keys", "Keys\Keys.csproj", "{B1007B9E-F955-4662-A8D8-3AB9341BD03E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElevatorSimulator", "ElevatorSimulator\ElevatorSimulator.csproj", "{9820D2C1-C991-4FF3-9127-B26CAB8C6BC8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -46,6 +47,10 @@ Global
 		{B1007B9E-F955-4662-A8D8-3AB9341BD03E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B1007B9E-F955-4662-A8D8-3AB9341BD03E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B1007B9E-F955-4662-A8D8-3AB9341BD03E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9820D2C1-C991-4FF3-9127-B26CAB8C6BC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9820D2C1-C991-4FF3-9127-B26CAB8C6BC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9820D2C1-C991-4FF3-9127-B26CAB8C6BC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9820D2C1-C991-4FF3-9127-B26CAB8C6BC8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
