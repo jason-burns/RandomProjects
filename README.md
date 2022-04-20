@@ -11,3 +11,5 @@ This tool is designed to read data and load it into objects to do some science o
 ### DiscordEmojiCounter
 A tool to count every emoji used in a chat history of a Discord channel.  I used [DiscordChatExporter](https://github.com/Tyrrrz/DiscordChatExporter) to pull the chat logs.
 
+### ElevatorSimulator
+A toy to simulate efficiencies and inefficiencies in elevator routing for different buildings in different scenarios.
